@@ -19,10 +19,6 @@ export const checkJwt = async (
 
     const decoded = jwt.verify(token, get('jwt_secret'))
 
-    // if (!Object.keys(decoded).includes('userId')) {
-    //   throw new Error('Token  Invalid')
-    // }
-
     const { userId, typeId } = <{ userId: string; typeId: string }>decoded
 
     const whiteToken = <{ token: string }>(

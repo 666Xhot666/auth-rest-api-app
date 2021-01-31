@@ -7,7 +7,7 @@ import path from 'path'
 import { authRouter, userRouter } from './routes'
 
 const app = express()
-const PORT = get('port') as string
+const PORT = get('port')
 
 app.disable('x-powered-by')
 app.use(cors(), express.json())
