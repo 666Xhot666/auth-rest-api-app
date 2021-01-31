@@ -1,0 +1,7 @@
+{
+  "port": 4000,
+  "mongo_uri": "your mongo uri",
+  "jwt_secret": "Your jwt secret",
+  "jwt_expiration": "10m",
+  "ping": "www.google.com"
+}
