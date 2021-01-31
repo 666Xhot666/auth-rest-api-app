@@ -6,19 +6,21 @@
   "scripts": {
     "start": "NODE_ENV=production node dist/app.js",
     "back-end:dev": "tsc && nodemon dist/app.js",
+    "back-end:build": "tsc --build",
     "client:dev": "npm run start  --prefix client",
     "client:install": "npm install --prefix client",
     "client:build": "npm run build --prefix client",
-    "dev": " NODE_ENV=development concurrently \"npm run back-end:dev\" \"npm run client:dev\""
+    "dev": " NODE_ENV=development concurrently \"npm run back-end:dev\" \"npm run client:dev\"",
+    "build": "npm run back-end:build && npm run client:build",
+    "app-install": "npm install && npm  run client:install"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jack Haust",
   "license": "ISC",
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/config": "^0.0.38",
     "@types/cors": "^2.8.9",
-    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.11",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/mongoose": "^5.10.3",
@@ -33,7 +35,6 @@
     "bcryptjs": "^2.4.3",
     "config": "^3.3.3",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.13",
